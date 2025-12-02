@@ -1,29 +1,36 @@
 # .gitignore para GeoAI Mentor
 
-# Ambiente Virtual Python
+# =============================================================================
+# ARQUIVOS SENSÍVEIS E CONFIGURAÇÕES
+# =============================================================================
+
+# Chaves de API e credenciais (NUNCA COMMITAR!)
+.env
+.env.local
+.env.*.local
+*.key
+*.pem
+*.secret
+
+# =============================================================================
+# AMBIENTE PYTHON
+# =============================================================================
+
+# Ambiente Virtual
 venv/
 env/
 ENV/
 .venv
-
-# Arquivos de configuração sensíveis
-.env
-.env.local
-.env.*.local
-
-# Chaves de API
-*.key
-*.pem
-*.secret
+.Python
 
 # Cache do Python
 __pycache__/
 *.py[cod]
 *$py.class
 *.so
+.pytest_cache/
 
 # Distribuição / Empacotamento
-.Python
 build/
 develop-eggs/
 dist/
@@ -39,52 +46,147 @@ wheels/
 *.egg-info/
 .installed.cfg
 *.egg
-
-# PyInstaller
 *.manifest
 *.spec
 
-# Testes
+# Testes e Coverage
 htmlcov/
 .tox/
 .coverage
 .coverage.*
 .cache
-.pytest_cache/
 nosetests.xml
 coverage.xml
 *.cover
 
-# Jupyter Notebook
-.ipynb_checkpoints
-*.ipynb
+# =============================================================================
+# IDEs E EDITORES
+# =============================================================================
 
-# IDEs
+# VS Code
 .vscode/
+
+# PyCharm / IntelliJ
 .idea/
+
+# Outros editores
 *.swp
 *.swo
 *~
+
+# =============================================================================
+# SISTEMA OPERACIONAL
+# =============================================================================
+
+# macOS
 .DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Linux
+*~
+
+# =============================================================================
+# JUPYTER NOTEBOOK
+# =============================================================================
+
+.ipynb_checkpoints
+*.ipynb
+
+# =============================================================================
+# LOGS E TEMPORÁRIOS
+# =============================================================================
 
 # Logs
 *.log
 logs/
+
+# Arquivos temporários
+*.tmp
+temp/
+tmp/
 
 # Banco de dados local
 *.db
 *.sqlite
 *.sqlite3
 
-# Temporários
-*.tmp
-temp/
-tmp/
+# =============================================================================
+# DOCUMENTAÇÃO ANTIGA/RASCUNHOS (não commitar)
+# =============================================================================
 
-# Assets grandes (se necessário)
-# assets/*.mp4
-# assets/*.mov
+# README antigo (backup local)
+README_antigo.md
+README_backup.md
 
-# Específico do projeto
+# Documentação auxiliar/guias (manter apenas local)
+GUIA_DEMO_VISUAL.md
+RELATO_DESENVOLVIMENTO.md
+
+# Rascunhos e arquivos temporários de documentação
+*_draft.md
+*_rascunho.md
+*_temp.md
+
+# =============================================================================
+# ASSETS TEMPORÁRIOS/GRANDES
+# =============================================================================
+
+# Vídeos grandes
+assets/*.mp4
+assets/*.mov
+assets/*.avi
+
+# Backups de assets
+assets/backup/
+assets/old/
+
+# =============================================================================
+# ARQUIVOS DE TESTE E DEBUG
+# =============================================================================
+
+# Saídas de testes
 listar_modelos_output.txt
 test_output/
+debug/
+playground/
+
+# Scripts temporários de teste
+test_*.py
+debug_*.py
+*_test_temp.py
+
+# =============================================================================
+# O QUE SERÁ COMMITADO (REFERÊNCIA)
+# =============================================================================
+# ✅ ARQUIVOS PYTHON:
+#    - chatbot_mentor.py (código principal)
+#    - listar_modelos.py (utilitário)
+#
+# ✅ DOCUMENTAÇÃO:
+#    - README.md (documentação principal do projeto)
+#    - DOCUMENTACAO_COMPLETA.md (documentação técnica detalhada)
+#
+# ✅ CONFIGURAÇÃO:
+#    - requirements.txt (dependências)
+#    - .gitignore (este arquivo)
+#
+# ✅ ASSETS:
+#    - assets/ (pasta com imagens, GIFs e diagramas)
+#
+# ✅ LICENÇA (se adicionar):
+#    - LICENSE
+#
+# ❌ NÃO COMMITADO (LOCAL):
+#    - .env (chaves de API)
+#    - venv/ (ambiente virtual)
+#    - __pycache__/ (cache Python)
+#    - README_antigo.md (backup)
+#    - GUIA_DEMO_VISUAL.md (guia auxiliar)
+#    - RELATO_DESENVOLVIMENTO.md (relato pessoal)
