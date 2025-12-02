@@ -1,0 +1,90 @@
+# .gitignore para GeoAI Mentor
+
+# Ambiente Virtual Python
+venv/
+env/
+ENV/
+.venv
+
+# Arquivos de configuração sensíveis
+.env
+.env.local
+.env.*.local
+
+# Chaves de API
+*.key
+*.pem
+*.secret
+
+# Cache do Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Distribuição / Empacotamento
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Testes
+htmlcov/
+.tox/
+.coverage
+.coverage.*
+.cache
+.pytest_cache/
+nosetests.xml
+coverage.xml
+*.cover
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*.ipynb
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Logs
+*.log
+logs/
+
+# Banco de dados local
+*.db
+*.sqlite
+*.sqlite3
+
+# Temporários
+*.tmp
+temp/
+tmp/
+
+# Assets grandes (se necessário)
+# assets/*.mp4
+# assets/*.mov
+
+# Específico do projeto
+listar_modelos_output.txt
+test_output/
