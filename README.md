@@ -1,104 +1,277 @@
-# 🌍 GeoAI Mentor - Assistente IA para Transição de Carreira em Geociências
+# 🌍 GeoAI Mentor
+## Assistente IA para Transição de Carreira em Geociências
 
 <div align="center">
 
-![Python](https://img.shields.io/badge/Python-3.7+-blue.svg)
-![LangChain](https://img.shields.io/badge/LangChain-Latest-green.svg)
-![Google Gemini](https://img.shields.io/badge/Gemini-2.0--flash-orange.svg)
-![License](https://img.shields.io/badge/License-MIT-yellow.svg)
+![Python](https://img.shields.io/badge/Python-3.8+-blue.svg?style=flat-square)
+![LangChain](https://img.shields.io/badge/LangChain-Latest-green.svg?style=flat-square)
+![Google Gemini](https://img.shields.io/badge/Gemini-2.0--flash-orange.svg?style=flat-square)
+![License](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)
 
-**Um chatbot inteligente especializado em orientar geocientistas na migração para Ciência de Dados e IA**
-
-[Demonstração](#-demonstração) • [Instalação](#-instalação-rápida) • [Como Usar](#-como-usar) • [Arquitetura](#-arquitetura-técnica) • [Documentação](DOCUMENTACAO_COMPLETA.md)
+**Um chatbot inteligente e especializado que orienta geocientistas na transição para Ciência de Dados e IA**
 
 </div>
 
 ---
 
-## 🎯 O Problema
+## 📋 Índice
 
-Muitos **geofísicos e geólogos** possuem forte base em matemática e física, mas enfrentam dificuldades ao migrar para **Ciência de Dados e IA**. As principais dúvidas incluem:
-
-- 🤔 Quais linguagens de programação aprender?
-- 📚 Como transferir conhecimentos da área de geociências?
-- 💼 Que projetos criar para um portfólio atrativo?
-- 🎓 Quais cursos e recursos priorizar?
-
-## 💡 A Solução: GeoAI Mentor
-
-Um **chatbot assistente com memória conversacional** que atua como mentor personalizado, lembrando do contexto da conversa para fornecer orientações coesas e relevantes.
-
-### ✨ Diferenciais
-
-- 🧠 **Memória Conversacional**: Mantém contexto entre múltiplas perguntas
-- 🎓 **Especializado**: Foco em geocientistas e suas necessidades específicas
-- 🤝 **Personalizado**: Respostas adaptadas ao perfil do usuário
-- 🔄 **Múltiplas Sessões**: Suporta conversas independentes simultâneas
+- [O Problema](#-o-problema)
+- [A Solução](#-a-solução)
+- [Recursos](#-recursos)
+- [Instalação](#-instalação)
+- [Como Usar](#-como-usar)
+- [Tecnologias](#-tecnologias)
+- [Arquitetura](#-arquitetura)
+- [Exemplos](#-exemplos)
 
 ---
 
-## 🚀 Instalação Rápida
+## 🎯 O Problema
+
+Geocientistas e geofísicos possuem **sólida base em matemática e física**, mas enfrentam desafios ao migrar para **Ciência de Dados e IA**:
+
+- ❓ Qual linguagem de programação aprender?
+- ❓ Como aplicar conhecimentos geofísicos em Data Science?
+- ❓ Que projetos criar para um portfólio competitivo?
+- ❓ Quais recursos e cursos priorizar?
+
+## 💡 A Solução
+
+**GeoAI Mentor** é um chatbot assistente com memória conversacional que funciona como um **mentor personalizado**, mantendo contexto entre perguntas e fornecendo orientações coesas e relevantes.
+
+---
+
+## ✨ Recursos Principais
+
+| Recurso | Descrição |
+|---------|-----------|
+| 🧠 **Memória Conversacional** | Mantém contexto completo entre múltiplas perguntas |
+| 🎓 **Especialização** | Focado especificamente em transição de geocientistas |
+| 🤝 **Personalização** | Respostas adaptadas ao perfil e experiência do usuário |
+| 🔄 **Múltiplas Sessões** | Suporta conversas independentes simultâneas |
+| 📍 **Contextualização** | Exemplos e recomendações baseadas em geofísica/geologia |
+| ⚡ **Respostas Detalhadas** | Explicações completas com bibliotecas, ferramentas e exemplos |
+
+---
+
+## 🚀 Instalação
 
 ### Pré-requisitos
 
-- Python 3.7 ou superior
-- Chave de API do Google Gemini ([Obter gratuitamente](https://aistudio.google.com/app/apikey))
+- **Python 3.8+**
+- **Chave de API Google Gemini** ([Obter gratuitamente](https://aistudio.google.com/app/apikey))
 
-### Passo a Passo
+### Passos de Instalação
 
 ```bash
 # 1. Clone o repositório
 git clone https://github.com/seu-usuario/GeoAI_Mentor.git
 cd GeoAI_Mentor
 
-# 2. Crie e ative um ambiente virtual
+# 2. Crie um ambiente virtual
 python -m venv venv
 
-# Windows
+# 3. Ative o ambiente
+# Windows:
 .\venv\Scripts\activate
-
-# Linux/Mac
+# Linux/Mac:
 source venv/bin/activate
 
-# 3. Instale as dependências
+# 4. Instale as dependências
 pip install -r requirements.txt
 
-# 4. Configure a chave de API
-# Edite o arquivo .env e adicione:
-# GOOGLE_API_KEY="sua_chave_aqui"
+# 5. Configure a chave de API
+# Crie um arquivo .env na raiz do projeto:
+echo GOOGLE_API_KEY="sua_chave_aqui" > .env
 ```
 
 ---
 
 ## 💻 Como Usar
 
-Execute o chatbot:
-
 ```bash
 python chatbot_mentor.py
 ```
 
-### Exemplo de Interação
+O chatbot processará automaticamente as perguntas predefinidas e exibirá:
+- ✅ Respostas detalhadas com contexto conversacional
+- ✅ Histórico completo da conversa ao final
+- ✅ Recomendações específicas para geocientistas
+
+---
+
+## 🛠️ Tecnologias
+
+| Tecnologia | Propósito |
+|-----------|----------|
+| **Python 3.8+** | Linguagem principal |
+| **LangChain** | Orquestração de IA e gerenciamento de prompts |
+| **Google Gemini 2.0-Flash** | Modelo de linguagem |
+| **python-dotenv** | Gerenciamento de variáveis de ambiente |
+
+### Dependências Principais
 
 ```
-🔵 Pergunta: Eu sou geofísico e quero migrar para a área de dados.
-              Qual linguagem de programação devo aprender primeiro?
-
-🤖 GeoAI Mentor: Olá! Que excelente escolha! Para começar sua jornada,
-                 recomendo Python. É ideal para geocientistas porque...
-                 [resposta detalhada sobre Python, NumPy, Pandas, etc.]
-
-─────────────────────────────────────────────────────────────────────
-
-🔵 Pergunta: E que tipo de projeto de portfólio eu poderia criar
-              usando essa linguagem?
-
-🤖 GeoAI Mentor: Excelente pergunta! Com Python, você pode criar:
-                 1. Análise de dados sísmicos com NumPy e Matplotlib
-                 2. Modelagem de reservatórios com machine learning
-                 3. Mapas interativos com GeoPandas...
-                 [sugestões específicas para Python + Geofísica]
+langchain
+langchain-google-genai
+python-dotenv
 ```
+
+---
+
+## 🏗️ Arquitetura
+
+```
+┌─────────────────────┐
+│  Perguntas Input    │
+└──────────┬──────────┘
+           │
+           ▼
+┌─────────────────────────┐
+│  Template de Prompt     │
+│  (Sistema + Histórico)  │
+└──────────┬──────────────┘
+           │
+           ▼
+┌─────────────────────────┐
+│  LLM Chain (LCEL)       │
+│  Gemini 2.0-Flash       │
+└──────────┬──────────────┘
+           │
+           ▼
+┌─────────────────────────┐
+│  Memória Conversacional │
+│  (InMemoryChatHistory)  │
+└──────────┬──────────────┘
+           │
+           ▼
+┌─────────────────────┐
+│  Resposta Completa  │
+└─────────────────────┘
+```
+
+---
+
+## 📝 Exemplos
+
+### Exemplo 1: Recomendação de Linguagem
+
+```
+🔵 Pergunta: Eu sou geofísico e quero migrar para a área de dados. 
+             Qual linguagem de programação devo aprender primeiro?
+
+🤖 GeoAI Mentor: 
+Python é a recomendação ideal! Por ser versátil, ter bibliotecas 
+especializadas (NumPy, Pandas, GeoPandas), e integração com 
+ferramentas geofísicas...
+```
+
+### Exemplo 2: Sugestões de Portfólio
+
+```
+🔵 Pergunta: E que tipo de projeto de portfólio eu poderia criar?
+
+🤖 GeoAI Mentor:
+1. Previsão de Porosidade a partir de Dados Sísmicos
+2. Análise de Dados de Poços
+3. Classificação de Facies Sedimentares
+4. Mapeamento de Anomalias Magnéticas
+5. Modelagem de Propagação de Ondas Sísmicas
+```
+
+---
+
+## 📁 Estrutura do Projeto
+
+```
+GeoAI_Mentor/
+├── chatbot_mentor.py      # Script principal
+├── requirements.txt       # Dependências Python
+├── .env                   # Variáveis de ambiente (não versionado)
+├── .gitignore            # Arquivos a ignorar no git
+└── README.md             # Este arquivo
+```
+
+---
+
+## ⚙️ Configuração
+
+### Arquivo `.env`
+
+```env
+GOOGLE_API_KEY="sua_chave_de_api_aqui"
+```
+
+**Importante:** Nunca versione o arquivo `.env` em repositórios públicos!
+
+---
+
+## 🔧 Customização
+
+### Modificar Perguntas
+
+Edite a lista `perguntas` em `chatbot_mentor.py`:
+
+```python
+perguntas = [
+    "Sua primeira pergunta aqui",
+    "Sua segunda pergunta aqui",
+    "Adicione mais quantas quiser"
+]
+```
+
+### Ajustar Temperatura da IA
+
+Na instância do modelo, altere o parâmetro `temperature`:
+
+```python
+modelo = ChatGoogleGenerativeAI(
+    model="gemini-2.0-flash",
+    temperature=0.7  # 0.0 = determinístico, 1.0 = criativo
+)
+```
+
+---
+
+## 📊 Saída Esperada
+
+O programa exibe:
+1. ✅ Cada pergunta com emoji 🔵
+2. ✅ Resposta detalhada com emoji 🤖
+3. ✅ Separadores entre perguntas
+4. ✅ **Histórico completo** ao final (com 📝)
+
+---
+
+## 🤝 Contribuições
+
+Sugestões e melhorias são bem-vindas! Abra uma issue ou pull request.
+
+---
+
+## 📄 Licença
+
+Este projeto é licenciado sob a Licença MIT - veja detalhes para usar livremente.
+
+---
+
+## 👨‍💻 Autor
+
+Desenvolvido como projeto de demonstração de **IA aplicada à transição de carreira em geociências**.
+
+---
+
+## 📞 Suporte
+
+Para dúvidas ou problemas:
+1. Verifique se a chave de API está correta no `.env`
+2. Confirme que todas as dependências foram instaladas: `pip list`
+3. Teste a conexão com: `python -c "import langchain; print('OK')"`
+
+---
+
+**Última atualização:** Dezembro 2025
 
 ---
 
